@@ -44,4 +44,25 @@ func main() {
 	// i4 = "Error"
 	// i4 := "Error"
 	// 関数外での暗黙的な定義はできない
+
+	// byte
+	by := []byte{74, 72}
+	fmt.Println(by)
+	fmt.Println(string(by))
+
+	// 配列
+	var arr1 [3]int
+	fmt.Println(arr1)
+
+	var arr2 [3]string = [3]string{"A", "B"}
+	fmt.Println(arr2)
+
+	arr3 := [3]int{77, 88, 99}
+	fmt.Println(arr3)
+
+	// ...で可変長にできる
+	arr4 := [...]string{"Go", "Lang"}
+	fmt.Println(arr4)
+	fmt.Printf("%T", arr4)
+
 }

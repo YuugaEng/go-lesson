@@ -63,6 +63,29 @@ func main() {
 	// ...で可変長にできる
 	arr4 := [...]string{"Go", "Lang"}
 	fmt.Println(arr4)
-	fmt.Printf("%T", arr4)
+	fmt.Printf("%T\n", arr4)
+
+	// interface型
+	// あらゆる型と互換性がある
+	var x interface{}
+	fmt.Println(x) // <nil>が表示される 何も値がないよの意味
+	fmt.Printf("%T\n", x)
+
+	x = 100
+	fmt.Println(x)
+	fmt.Printf("数値 %T\n", x)
+
+	x = "XYZ"
+	fmt.Println(x)
+	fmt.Printf("文字列 %T\n", x)
+
+	x = [3]int{1, 3, 6}
+	fmt.Println(x)
+	fmt.Printf("配列 %T\n", x)
+
+	// interface型は様々な値をいれることができるがデータ特有の計算などができない
+	// 以下はエラーになる
+	// x = 8
+	// fmt.Println(x + 3)
 
 }
